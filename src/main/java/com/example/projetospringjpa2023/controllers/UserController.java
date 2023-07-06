@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    
+
     @GetMapping
     public ResponseEntity<User> listaDeUsuarios() {
         User u = new User(1L, "Maria", "João", "lol", "aja");

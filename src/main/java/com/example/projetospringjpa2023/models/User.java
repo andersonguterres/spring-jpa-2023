@@ -1,5 +1,6 @@
 package com.example.projetospringjpa2023.models;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
@@ -10,7 +11,12 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 
+@Entity
+@Table(name = "usuarios")
 public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
